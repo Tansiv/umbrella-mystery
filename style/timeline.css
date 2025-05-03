@@ -1,0 +1,182 @@
+/* timeline.css */
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #1c1e2a;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    background-color: #2a2d40;
+    padding: 1rem;
+    text-align: center;
+    animation: fadeSlideDown 1s ease-in-out;
+  }
+  
+  .header h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 2rem;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    animation: fadeIn 1s ease 0.5s both;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f9ca24;
+  }
+  
+  .timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    width: 4px;
+    background-color: #ccc;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .event {
+    position: relative;
+    width: 45%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #2f334d, #3a3e59);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 0.6s ease forwards;
+  }
+  
+  .event:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  .event.left {
+    left: 0;
+    animation: slideLeftFade 0.8s ease-out forwards;
+  }
+  
+  .event.right {
+    left: 55%;
+    animation: slideRightFade 0.8s ease-out forwards;
+  }
+  
+  .event::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background-color: #6ab04c;
+    border: 3px solid #1c1e2a;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .event.left::before {
+    right: -8px;
+  }
+  
+  .event.right::before {
+    left: -8px;
+  }
+  
+  .event h3 {
+    margin-top: 0;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+  
+  .event p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dcdde1;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideLeftFade {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes slideRightFade {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInCard {
+    to { opacity: 1; }
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: #111;
+    color: #aaa;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline-line {
+      left: 8px;
+    }
+  
+    .event {
+      width: calc(100% - 2rem);
+      left: 1rem !important;
+      margin-left: 0;
+      animation: fadeInCard 0.8s ease forwards;
+    }
+  
+    .event.left::before,
+    .event.right::before {
+      left: -8px;
+      right: auto;
+    }
+  }
+  

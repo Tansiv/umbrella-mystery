@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Characters - Umbrella Mystery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="characters.css" />
+  <style>
+    body {
+      background-color: #1c1e2a;
+      color: #f1f1f1;
+      font-family: 'Cormorant Garamond', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2a2d40;
+      text-align: center;
+      padding: 1.5rem;
+      animation: fadeSlideDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-family: 'Special Elite', cursive;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 1rem 0;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f9ca24;
+    }
+
+    .characters-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .character-card {
+      background: linear-gradient(135deg, #2f334d, #3a3e59);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeInCard 0.8s ease forwards;
+    }
+
+    .character-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .character-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .character-name {
+      margin-top: 0.8rem;
+      font-family: 'Special Elite', cursive;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInCard {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      .character-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meet the Characters</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="clues.html">Clues</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="characters-container">
+      <div class="character-card">
+        <img src="assets/images/maya.jpeg" alt="Maya Arwen">
+        <div class="character-name">Maya Arwen</div>
+      </div>
+      <div class="character-card">
+        <img src="assets/images/elias.jpeg" alt="Elias Arwen">
+        <div class="character-name">Elias Arwen</div>
+      </div>
+      <div class="character-card">
+        <img src="assets/images/Mrs. Lera.jpeg" alt="Mrs. Elara Lera">
+        <div class="character-name">Mrs. Elara Lera</div>
+      </div>
+      <div class="character-card">
+        <img src="assets/images/Camellia Brine.jpeg" alt="Camellia Brine">
+        <div class="character-name">Camellia Brine</div>
+      </div>
+      <div class="character-card">
+        <img src="assets/images/Principal Haxley.jpeg" alt="Principal Haxley">
+        <div class="character-name">Principal Haxley</div>
+      </div>
+      <div class="character-card">
+        <img src="assets/images/Man in the Hat.jpeg" alt="The Man in the Hat">
+        <div class="character-name">The Man in the Hat</div>
+      </div>
+      <div class="character-card">
+        <img src="assets/images/A.R..jpeg" alt="A.R.">
+        <div class="character-name">A.R.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 The Umbrella in the Rain. All characters belong to the story.
+  </footer>
+</body>
+</html>

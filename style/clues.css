@@ -1,0 +1,114 @@
+/* clues.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1c2c;
+    color: #e6e6e6;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .header h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #a3bfff;
+  }
+  
+  .clues-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .clue-card {
+    background-color: #2a2e45;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
+  }
+  
+  .clue-card h2 {
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 1rem;
+  }
+  
+  .clue-card p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .clue-card button {
+    padding: 0.6rem 1.2rem;
+    background-color: #3a3f5d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .clue-card button:hover {
+    background-color: #5c6893;
+  }
+  
+  .clue-reveal {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    background-color: #444d6d;
+    padding: 0.8rem;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

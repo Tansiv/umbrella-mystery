@@ -1,0 +1,119 @@
+Clues & Hidden Puzzles – The Umbrella in the Rain: A Diary of Secrets
+=======================================================================
+
+1. 🧩 The Reversed Diary Entry
+------------------------------
+On the characters page, if a user highlights Maya's "Secret" section, the text flips to reveal a reversed sentence:
+  > ".em evas ot yrt i ,emag eht fo tuo tog reven s'ti ,emag a s'tI"
+
+Decoded: “It’s a game, it’s never got out of the game, I try to save me.”
+
+Solution Hint: Mirror-text or use JavaScript to reverse the string on click.
+
+---
+
+2. 🔐 The Umbrella Code (Hidden Link Unlock)
+---------------------------------------------
+In the homepage’s rain animation, one falling raindrop is clickable.
+Clicking it opens a locked page (`secrets/locked.html`) that asks for a 4-digit code.
+
+Clue: The user must find this number across three other pages:
+  - “2” is mentioned in Elias's age
+  - “4” is in the crossword puzzle page count
+  - “7” is on the voicemail timestamp
+  - “1” is the umbrella number stitched inside
+
+Correct Code: 2471
+
+---
+
+3. 🔍 Morse Code Message
+-------------------------
+On the `timeline.html`, the phrase “The river never forgets” flickers.
+On hover, it changes to Morse:
+  > - .... . / .-. .. ...- . .-. / -. . ...- . .-. / ..-. --- .-. --. . - ...
+
+Solution: Translate Morse code to uncover another diary clue.
+
+---
+
+4. 🧠 Audio Clue (Backmasked Voice)
+-----------------------------------
+A hidden button on the `clues.html` plays a whispering audio file in reverse (backmasking).
+Normal speed sounds like gibberish. Reversed, it says:
+  > “It wasn't an accident. Ask the librarian.”
+
+Bonus: Add a toggle button to play audio forwards/backwards.
+
+---
+
+5. 🧪 Chemical Clue (Elias’s Ink)
+---------------------------------
+One clue says: “The ink will fade in the sun, but moonlight remembers.”
+User clicks a diary page on the `characters.html` at night mode (dark theme only), and a hidden message appears using CSS `:after` + `visibility`.
+
+Hidden Message:
+  > "Page 8 is fake. Page 13 is written by someone else."
+
+---
+
+6. 🗺️ Map Fragment Puzzle
+--------------------------
+The user unlocks 4 fragments of a map across the site:
+- One behind an image (use `z-index` hover)
+- One under a fake 404 page
+- One embedded in a flipped character card
+- One inside the rain animation as a semi-transparent overlay
+
+When assembled, the map leads to `timeline.html#bridge` — and reveals the final clue.
+
+---
+
+7. ✉️ Redacted Letter Reveal
+-----------------------------
+On `clues.html`, a redacted letter shows blacked-out lines.
+If the user holds down a key (e.g. `Shift`), the redacted text slowly fades in.
+
+Letter final line:
+> "A.R. isn't a person. It's an instruction."
+
+---
+
+8. 🧬 DNA Cipher
+----------------
+A string is shown somewhere like this:
+  > TCTAGGCTTACGAACTGAAGCTG
+
+Clue: "Translate the DNA to letters, skip every second letter"
+
+Decoded: Use A=1, C=2, G=3, T=4 → yields a numeric code → maps to ASCII
+
+Hidden Message: “LERA KNOWS”
+
+---
+
+9. 📅 Secret Calendar Date
+--------------------------
+A calendar on the `timeline.html` has clickable dates.
+Only one day (July 14) opens a popup that asks:
+> "Who gave Maya the envelope?"
+
+Correct Answer: Mrs. Lera
+
+If correct, the popup fades and displays:
+> “Check the umbrella’s reflection.”
+
+---
+
+10. 🧾 Typing Machine Mini-Game (Advanced)
+------------------------------------------
+Unlock a typing mini-game using Elias’s typewriter.
+The user types in riddles, and if the input matches a riddle answer, it auto-unlocks a new quote.
+
+Example:
+> Type: “What falls but never breaks?”
+> Answer: “Night”
+> Response: “Check the moonlight diary page.”
+
+---
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clues - The Umbrella in the Rain</title>
+  <link rel="stylesheet" href="style/clues.css">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Mysterious Clues</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="characters.html">Characters</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="clue-container">
+    <div class="clue-card">
+      <img src="assets/secrets/diary_page.jpg" alt="Diary Page">
+      <h2>Diary Page</h2>
+      <button onclick="playSound('assets/audio/whisper_unlock.mp3')">🔊 Whisper</button>
+    </div>
+
+    <div class="clue-card">
+      <img src="assets/secrets/redacted_letter.jpg" alt="Redacted Letter">
+      <h2>Redacted Letter</h2>
+      <button onclick="playSound('assets/audio/Soft whisper.mp3')">🔊 Soft Whisper</button>
+    </div>
+
+    <div class="clue-card">
+      <img src="assets/secrets/puzzle_overlay.jpg" alt="Puzzle Overlay">
+      <h2>Puzzle Overlay</h2>
+      <button onclick="playSound('assets/audio/mouse-click-331781.mp3')">🎵 Click Sound</button>
+    </div>
+
+    <div class="clue-card">
+      <img src="assets/secrets/map_fragment1.jpg" alt="Map Fragment">
+      <h2>Map Fragment</h2>
+      <button onclick="playSound('assets/audio/whisper_unlock.mp3')">🔊 Whisper</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 The Umbrella in the Rain. All secrets reserved.</p>
+  </footer>
+
+  <script>
+    function playSound(src) {
+      const audio = new Audio(src);
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
